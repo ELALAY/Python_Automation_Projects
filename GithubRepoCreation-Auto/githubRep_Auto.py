@@ -1,5 +1,5 @@
 from selenium import webdriver
-from Func_Module import log_in_Github, Create_New_Rep_Github, Submit_Creation
+from Github_Func_Module import log_in_Github, Create_New_Rep_Github, Submit_Creation
 
 repName = input('Enter the name of your Repository >> ')
 
