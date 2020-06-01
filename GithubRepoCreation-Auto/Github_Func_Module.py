@@ -1,10 +1,11 @@
 from selenium import webdriver
-from GithubAcc import GIT_USERNAME, GIT_PASSWORD 
 import time 
 
 #Python_Automation_Projects
 #GITHUB Login
 def log_in_Github(driver):
+    GIT_USERNAME = input('Github Username >> ')
+    GIT_PASSWORD = input('Github Password >> ')
     username_field_login = driver.find_element_by_xpath('//*[@id="login_field"]')
     username_field_login.send_keys(GIT_USERNAME)
 
