@@ -3,6 +3,9 @@ from Github_Func_Module import log_in_Github, Create_New_Rep_Github, Submit_Crea
 
 repName = input('Enter the name of your Repository >> ')
 
+GIT_USERNAME = input('Github Username >> ')
+GIT_PASSWORD = input('Github Password >> ')
+
 driver = webdriver.Chrome()
 driver.get('https://github.com')
 
@@ -13,7 +16,7 @@ signimBtnForm = driver.find_element_by_xpath('/html/body/div[1]/header/div/div[2
 signimBtnForm.click()
 
 #Log In Form
-log_in_Github(driver)
+log_in_Github(driver, GIT_USERNAME, GIT_PASSWORD)
 
 #New Repository
 NewRepoBtn = driver.find_element_by_xpath('//*[@id="repos-container"]/h2/a')
