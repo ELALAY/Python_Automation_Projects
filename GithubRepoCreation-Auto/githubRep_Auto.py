@@ -27,4 +27,12 @@ Create_New_Rep_Github(driver, repName)
 
 #Submit Creation
 Submit_Creation(driver)
-    
+
+#Clone the Rep
+#Clone Btn
+CloneBtn = driver.find_element_by_xpath('//*[@id="js-repo-pjax-container"]/div[2]/div/div[4]/span/get-repo-controller/details')
+CloneBtn.click()
+#Copy Link Btn
+CopyLink = driver.find_element_by_xpath('//*[@id="js-repo-pjax-container"]/div[2]/div/div[4]/span/get-repo-controller/details/div/div/div[1]/div[1]/div/div/clipboard-copy')
+CopyLink.click()
+
